@@ -136,8 +136,7 @@ As expected, unencrypted RDS wins this one in simple write test with `4.635805` 
 
 ## Summary of results
 
-| Test Description|Encrypted RDS|Unencrypted RDS |
-|---			  |---			|---			 |
+| **Test Description**|**Encrypted RDS**|**Unencrypted RDS** |
 |Ad-hoc Insert 1 (10 million rows)|1 min 31 sec|**1 min 03 sec**|
 |Ad-hoc Insert 2 (10 million rows)|2 min 10 sec|**1 min 40 sec**|
 |Simple Write Test (pgbench)|**4.274140 transactions/sec**|4.635805 transactions/sec|
