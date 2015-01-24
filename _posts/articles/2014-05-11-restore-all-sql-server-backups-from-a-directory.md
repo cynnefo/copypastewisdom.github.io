@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Restore All SQL Server Backups From a Directory"
+excerpt: ""
 modified: 2014-05-11 20:16:05 +0530
 categories: articles
 tags: [AWS, SQLServer]
