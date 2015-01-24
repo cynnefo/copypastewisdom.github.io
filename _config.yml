@@ -3,7 +3,7 @@
 title: Cynnefo
 locale: en_US
 description: We shall not cease from exploration...!
-logo: site-logo.png
+#logo: site-logo.png
 search: true
 url: http://cynnefo.github.io
 
