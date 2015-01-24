@@ -12,11 +12,11 @@ share: true
 Amazon has recently [announced](https://aws.amazon.com/blogs/aws/new-encryption-options-for-amazon-rds/) new **data at rest** encryption option for PostgreSQL, MySQL and Oracle. While Enterprise editions of Microsoft SQL Server and Oracle already had encryption in the form of AWS Managed Keys, this new feature extends support to PostgreSQL and MySQL. 
 
 We took the new encryption enabled Postgres instance out for a spin and this is what we learned:
-* An existing unencrypted RDS instance can not be converted to encrypted one.
-* Restoring a backup/snapshot of an unencrypted RDS into an encrypted RDS is not supported
-* Once you provision an encrypted RDS instance, there is no going back. You cant change it to unencrypted.
-* You can not have unencrypted read replicas for an encrypted RDS or vice versa.
-* Not all instance classes support encryption. Check the list of instance classes that support encryption [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html)
+* An existing unencrypted RDS instance can not be converted to encrypted one.  
+* Restoring a backup/snapshot of an unencrypted RDS into an encrypted RDS is not supported.  
+* Once you provision an encrypted RDS instance, there is no going back. You cant change it to unencrypted.  
+* You can not have unencrypted read replicas for an encrypted RDS or vice versa.  
+* Not all instance classes support encryption. Check the list of instance classes that support encryption [here](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html).  
 
 What all of the above means is - if you are trying to upgrade an existing RDS to enable encryption, its not *that* straight forward. So the only way left is to take a logical backup(export data), spin a new RDS instance with encryption enabled and import data from logical backup. 
 
@@ -62,19 +62,19 @@ PGBench runs same set of SQL commands multiple times in same sequence and calcul
 
 Assuming that you already have PGBench binaries installed, cd to that directory and initialize a database on both instances.
 
-`pgbench -U minjar -h hostname.ap-northeast-1.rds.amazonaws.com -p 5432 -i -s 70 BenchMe`
+`pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -i -s 70 BenchMe`
 
 You may have to create a blank database BenchMe on your RDS instances. The above command will create `pgbench_accounts`, `pgbench_branches`, `pgbench_history` and `pgbench_tellers` tables and populates them with data. 
 
 ## Read Write Test
 
-`pgbench -U minjar -h hostname.ap-northeast-1.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe`
+`pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe`
 
 The above command runs simple read/write workload on BenchMe database for 600 sec. Results below:
 
 Encrypted RDS
 
 <figure>
-	<a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png"><img src="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png" alt="image"></a>
-	<figcaption><a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png" title="Encrypted RDS, simple read-write workload"></a>.</figcaption>
+	<img src="/images/1.png" alt="image">
+	<figcaption>Encrypted RDS, Read/Write test.</figcaption>
 </figure>
