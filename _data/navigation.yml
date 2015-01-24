@@ -1,4 +1,6 @@
 # Site navigation links
+- title: Home
+  url: http://cynnefo.github.io
 
 - title: About
   url: /about/
