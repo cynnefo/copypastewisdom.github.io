@@ -68,13 +68,13 @@ You may have to create a blank database BenchMe on your RDS instances. The above
 
 ## Read Write Test
 
-`pgbench -U minjar -h xxxxxx-encrypted-xxxx.clim2yipztss.ap-northeast-1.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe`
+`pgbench -U minjar -h hostname.ap-northeast-1.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe`
 
 The above command runs simple read/write workload on BenchMe database for 600 sec. Results below:
 
 Encrypted RDS
 
 <figure>
-	<a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png?dl=0"><img src="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png?dl=0" alt="image"></a>
-	<figcaption><a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png?dl=0" title="Encrypted RDS, simple read-write workload"></a>.</figcaption>
+	<a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png"><img src="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png" alt="image"></a>
+	<figcaption><a href="https://www.dropbox.com/s/ejvnesjf6xvto1a/1.png" title="Encrypted RDS, simple read-write workload"></a>.</figcaption>
 </figure>
