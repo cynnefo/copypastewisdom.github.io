@@ -64,19 +64,86 @@ PGBench runs same set of SQL commands multiple times in same sequence and calcul
 
 Assuming that you already have PGBench binaries installed, cd to that directory and initialize a database on both instances.
 
-`pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -i -s 70 BenchMe`
+{% highlight bash %}
+pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -i -s 70 BenchMe
+{% endhighlight %}
 
 You may have to create a blank database BenchMe on your RDS instances. The above command will create `pgbench_accounts`, `pgbench_branches`, `pgbench_history` and `pgbench_tellers` tables and populates them with data. 
 
 ## Read Write Test
 
-`pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe`
+{% highlight bash %}
+pgbench -U minjar -h hostname.rds.amazonaws.com -p 5432 -c 4 -j 2 -T 600 BenchMe
+{% endhighlight %} 
 
 The above command runs simple read/write workload on BenchMe database for 600 sec. Results below:
 
-Encrypted RDS
+*Unencrypted RDS*
 
 <figure>
 	<img src="/images/1.png" alt="image">
-	<figcaption>Encrypted RDS, Read/Write test.</figcaption>
 </figure>
+
+*Encrypted RDS*
+<figure>
+	<img src="/images/2.png" alt="image">
+</figure>
+
+The encrypted RDS is processing `0.187146` transactions per second which is slightly better than unencrypted `0.132844`. This is interesting. This better read/write performance of encrypted RDS is in spite of marginally slower writes compared to unencrypted. What gives? We shall see. 
+
+## Read Only Test
+
+{% highlight bash %}
+pgbench -U minjar -h hostname.rds.amazonaws.com -c 4 -j 2 -T 600 -S BenchMe
+{% endhighlight %} 
+
+In the above command, `-S` switch makes sure that the workload is read-only and the time frame is 600 seconds. The results are below. 
+
+
+*Unencrypted RDS*
+
+<figure>
+	<img src="/images/3.png" alt="image">
+</figure>
+
+*Encrypted RDS*
+
+<figure>
+	<img src="/images/4.png" alt="image">
+</figure>
+
+In this test too, encrypted RDS wins with higher number of transactions per second compared to encrypted RDS. We think Amazon provisions these encrypted instances on better disk subsystem and they gain considerably in terms of read performance. This is one of the reasons why the read/write test above went in favour of encrypted RDS. 
+
+## Simple Write Test
+
+{% highlight bash %}
+pgbench -U minjar -h hostname.rds.amazonaws.com -c 4 -j 2 -T 600 -N BenchMe
+{% endhighlight %} 
+
+*Unencrypted RDS*
+
+<figure>
+	<img src="/images/5.png" alt="image">
+</figure>
+
+*Encrypted RDS*
+
+<figure>
+	<img src="/images/6.png" alt="image">
+</figure>
+
+As expected, unencrypted RDS wins this one in simple write test with `4.635805` transactions. This is in line with the initial findings from running ad-hoc inserts. 
+
+## Summary of results
+
+| Test Description|Encrypted RDS|Unencrypted RDS |
+|---			  |---			|---			 |
+|Ad-hoc Insert 1 (10 million rows)|1 min 31 sec|**1 min 03 sec**|
+|Ad-hoc Insert 2 (10 million rows)|2 min 10 sec|**1 min 40 sec**|
+|Simple Write Test (pgbench)|**4.274140 transactions/sec**|4.635805 transactions/sec|
+|Readonly Test(pgbench)|**20.869002 transactions/sec**|20.701378 transactions/sec|
+|Read-Write Test(pgbench)|**0.187146 transactions/sec**|0.132844 transactions/sec
+
+So the final verdict is - there will be a very slight performance hit in terms of writes when you enable RDS encryption. But Amazon more than makes up for it in terms of overall better performance. We suggest enabling RDS encryption, the slight write performance overhead is worth the security that encryption brings. 
+
+
