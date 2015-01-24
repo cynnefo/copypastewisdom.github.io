@@ -33,7 +33,7 @@ We ran a simple insert test to insert 10 million rows on both the instances usin
 {% highlight sql %}
 
 # Create Table 
-CREATE TABLE names (id INT	,NAME VARCHAR(100)	); 
+CREATE TABLE names (id INT, NAME VARCHAR(100)); 
 
 #Run the Insert 
 INSERT INTO names (
