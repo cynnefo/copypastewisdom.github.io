@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/post/108724853340/rds-encryption-and-benchmarking-postgresql).
+This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/post/108724853340/rds-encryption-and-benchmarking-postgresql). Go check out that blog, lots of interesting stuff in there :)
 {: .notice}
 
 Amazon has recently [announced](https://aws.amazon.com/blogs/aws/new-encryption-options-for-amazon-rds/) new **data at rest** encryption option for PostgreSQL, MySQL and Oracle. While Enterprise editions of Microsoft SQL Server and Oracle already had encryption in the form of AWS Managed Keys, this new feature extends support to PostgreSQL and MySQL. 
