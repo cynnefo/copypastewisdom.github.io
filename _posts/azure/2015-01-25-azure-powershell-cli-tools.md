@@ -114,10 +114,12 @@ azure storage account set
 
 # Create VM
 
-azure vm create my-vm-name 0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.4 --vm-name Gotham --vm-size extrasmall --location "Western US" --userName joker -password WhySoSiriousS! --blob-url https://azureclitest.blob.core.windows.net/vhds
+azure vm create Gotham 0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.4  --vm-size extrasmall --location "Western US" --userName joker -password WhySoSiriousS! --blob-url https://azureclitest.blob.core.windows.net/vhds
 
 {% endhighlight %}
 
+
+In the next post - I will write about some more azure cli commands and Azure Powershell. 
 
 
 
