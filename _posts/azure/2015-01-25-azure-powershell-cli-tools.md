@@ -68,7 +68,7 @@ Now that we have installed cli, lets set it up and play around a bit. There are 
 azure account download
 {% endhighlight %}
 
-This will launch your default browser. Signing with your live credentials and download the settings file
+This will launch your default browser. Signin with your live credentials and download the settings file
 {% highlight bash %}
 azure account import "E:\Azure Pass-1-25-2015-credentials.publishsettings"
 {% endhighlight %}
@@ -89,6 +89,36 @@ Azurecli has two modes - *Service Management Mode* and *Resource Management Mode
 azure config mode arm
 azure config mode asm
 {% endhighlight %}
+
+Coming back to *service management*, following are the major commands available. The commands are easy to construct. They are generally like this `azure [topic] [verb] [options]`
+
+<figure>
+	<img src="/images/azurecli.png" alt="image">
+</figure>
+
+Image source: [Interpolarability Blog](http://blogs.msdn.com/b/interoperability/archive/2012/06/07/windows-azure-command-line-tool-for-mac-and-linux.aspx)
+
+## Launch a VM
+
+Lets try to launch a VM using cli. Lets say I would like to launch a new Ubuntu VM on a new cloud service and use a new storage account. Let's check the related images available on Azure VMDepot
+
+{% highlight bash %}
+
+azure vm image list | findstr "Ubuntu" 
+
+# Create storage account
+azure storage account create mybasestorage --label PrimaryStorage --location "West US"
+
+# Set Azure storage account
+azure storage account set 
+
+# Create VM
+
+azure vm create my-vm-name 0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04-x64-v13.4 --vm-name Gotham --vm-size extrasmall --location "Western US" --userName joker -password WhySoSiriousS! --blob-url https://azureclitest.blob.core.windows.net/vhds
+
+{% endhighlight %}
+
+
 
 
 
