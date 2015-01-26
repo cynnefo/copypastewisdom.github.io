@@ -23,19 +23,19 @@ I prefer this over Powershell because your scripts can run anywhere as long as y
 
 If you are running a windows machine, do yourself a favor and install [Chocolatey](https://chocolatey.org/). Chocolatey is `yum install` equivalent for Windows crowd and it is awesome. Microsoft has actually shipped a package manager called [OneGet](http://blogs.msdn.com/b/garretts/archive/2014/04/01/my-little-secret-windows-powershell-oneget.aspx) on Windows 10 Technical Preview and Chocolatey is one of the package sources. Installing it is ridiculously easy. Open an elevated command prompt and paste the following
 
-{% highlight cmd %}
+{% highlight bash %}
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 {% endhighlight %}
 
 Once its installed, you can use `choco install myawesomepackage` to install wide variety of software. Coming back to installation of NodeJs, just enter this
 
-{% highlight cmd %}
+{% highlight bash %}
 choco install nodejs
 {% endhighlight %}
 
 Its that simple. Once done, use `npm` to install Azurecli
 
-{% highlight cmd %}
+{% highlight bash %}
 npm install azure-cli -g
 {% endhighlight %}
 
@@ -64,28 +64,28 @@ help:    Log in to an Azure subscription using Active Directory. Currently, the 
 
 Now that we have installed cli, lets set it up and play around a bit. There are two ways you could login - Using an organizational account (Azure AD Login) or a Microsoft live account. If you have Azure AD login, you can connect using `azure login -u username -p password`. I have a live account to which multiple subscriptions are attached so I first downloaded the azure publish settings file.
 
-{% highlight cmd %}
+{% highlight bash %}
 azure account download
 {% endhighlight %}
 
 This will launch your default browser. Signing with your live credentials and download the settings file
-{% highlight cmd %}
+{% highlight bash %}
 azure account import "E:\Azure Pass-1-25-2015-credentials.publishsettings"
 {% endhighlight %}
 
 If your account has multiple subscriptions attached to it, you might want to make sure that you are connected to the right subscription before doing anything
-{% highlight cmd %}
+{% highlight bash %}
 azure account list
 {% endhighlight %}
 
 Set the account you choose to use
-{% highlight cmd %}
+{% highlight bash %}
 azure account set "Azure Pass"
 {% endhighlight %}
 
 Azurecli has two modes - *Service Management Mode* and *Resource Management Mode*. Resource Manager is a relatively recent addition to Azure and its available on new portal. It allows you to manage a group of resources as a logical unit. Example - a bunch of servers on SQL Server AlwaysOn setup. There are a bunch of templates available which can be downloaded and modified. At the time of this writing, these two cli modes are exclusive and you can switch between them using commands below
 
-{% highlight cmd %}
+{% highlight bash %}
 azure config mode arm
 azure config mode asm
 {% endhighlight %}
