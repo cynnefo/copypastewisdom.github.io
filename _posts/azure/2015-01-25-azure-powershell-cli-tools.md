@@ -122,7 +122,7 @@ azure vm create Gotham 0b11de9248dd4d87b18621318e037d37__RightImage-Ubuntu-12.04
 In the next post - I will write about some more azure cli commands and Azure Powershell. 
 
 
-
+Check out Azurecli complete command reference [here](http://azure.microsoft.com/en-us/documentation/articles/command-line-tools) 
 
 
 
