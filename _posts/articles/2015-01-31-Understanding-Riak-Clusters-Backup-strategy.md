@@ -7,6 +7,8 @@ tags: [Databases, AWS, NoSQL]
 comments: true
 share: true
 ---
+This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/). 
+{: .notice}
 
 One of our customers was running a Riak cluster on Amazon EC2 and we had to design a backup strategy for this cluster. In order to come up with a backup strategy, one must first understand how Riak works, the kind of problems it solves, how things like consistency are handled. 
 
