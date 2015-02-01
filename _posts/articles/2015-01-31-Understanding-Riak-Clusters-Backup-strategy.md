@@ -7,7 +7,7 @@ tags: [Databases, AWS, NoSQL]
 comments: true
 share: true
 ---
-This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/). 
+This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/post/109769009085/understanding-riak-clusters-designing-a-backup). 
 {: .notice}
 
 One of our customers was running a Riak cluster on Amazon EC2 and we had to design a backup strategy for this cluster. In order to come up with a backup strategy, one must first understand how Riak works, the kind of problems it solves, how things like consistency are handled. 
@@ -17,7 +17,7 @@ One of our customers was running a Riak cluster on Amazon EC2 and we had to desi
 Riak is a scalable, highly available, distributed key-value store. Like Cassandra, Riak was modelled on Amazon's description of Dynamo with extra functionality like mapreduce, indexes and full-text search. A comparison of Riak with other NoSQL databases is out of the scope of this article, but checkout this [great summary](http://kkovacs.eu/cassandra-vs-mongodb-vs-couchdb-vs-redis) by Kristof
 
 
-## How Does Riak Clusters Work? 
+## How Does a Riak Cluster Work? 
 
 Data in a Riak cluster is distributed across nodes using consistent hashing. Riak's clusters are **masterless**. Each node in the cluster has same data, containing a complete, independent copy of Riak package. This design ensures fault-tolerance and scalability. Consistent hashing ensures data is distributed across all nodes in the cluster evenly. 
 
@@ -25,7 +25,7 @@ Data in a Riak cluster is distributed across nodes using consistent hashing. Ria
 
 Riak allows you to tune the *replication number*, which is **n** value in Riak speak. The default value is '3', which means that each object is replicated 3 times. At the time of this writing, Basho says that it is *almost 100%* sure that this piece of replicated data is in three different physical nodes and they are working towards guaranteeing that it will be so in future. 
 
-Riak's take on [CAP](http://en.wikipedia.org/wiki/CAP_theorem) (as an aside, you must read this [Plain English Introduction To CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/) is they let you tune *N* - Number of replicated nodes per bucket, *R* - number of nodes required for a read  and *W* - number of nodes required for a successful write. Riak requires a minimum of 4 nodes to set up but ideally,  you must be running at least 5 node cluster. [Here are details of why](http://basho.com/why-your-riak-cluster-should-have-at-least-five-nodes/). To summarize:
+Riak's take on [CAP](http://en.wikipedia.org/wiki/CAP_theorem) (as an aside, you must read this [Plain English Introduction To CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)) is they let you tune **N** - Number of replicated nodes per bucket, **R** - number of nodes required for a read  and **W** - number of nodes required for a successful write. Riak requires a minimum of 4 nodes to set up but ideally,  you must be running at least 5 node cluster. [Here are details of why](http://basho.com/why-your-riak-cluster-should-have-at-least-five-nodes/). To summarize:
 
 * If you have a 3 node cluster with N value as 3, When a node goes down, your cluster wants to replicate to 3 nodes, but you only have 2 and there is a risk of performance degradation and data loss
 * If you have a 4 node cluster with N value as 3, The reads use a quorum of 2 and writes use a quorum of 2. When a node goes down, 75 to 100 % of your nodes need to respond.
