@@ -24,10 +24,11 @@ I have completed all of the above courses and another course which talks about A
 
 
 Here are a few tips that might help you prepare better for this exam. 
-* Read all the white papers suggested by Amazon [in this document](http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_solutions_architect_associate_blueprint.pdf)
-* Complete all the above courses. David Clinton shows how to build a highly available media wiki application and a wordpress site on above courses. He covers pretty much everything, right from designing your VPC with multiple subnets, configuring routing tables, creating multiple subnets etc
-* I was lucky that I had access to an amazon account to launch services and play around with. Even if you don't want one, you can pretty much test everything thoroughly at around 8$ (well except redshift clusters etc). So get an account, create VPCs, subnets, play around with routing tables, Network ACLs, build a highly available app and auto scale it etc. 
-* Read [Amazon FAQs](http://aws.amazon.com/faqs/). They are very thorough and you might find answers to most of your future examination questions. Read EC2, VPC, S3/Glacier, IAM FAQs completely. 
-* During the exam, read the question carefully. When asking questions about less popular services like SQS, amazon is nice enough to add a couple of completely irrelevant options to make things easier for you. So read the questions and multiple choices carefully and when you don't know the answer for sure, use the process of elimination. :)
+
+* Read all the white papers suggested by Amazon [in this document](http://awstrainingandcertification.s3.amazonaws.com/production/AWS_certified_solutions_architect_associate_blueprint.pdf)  
+* Complete all the above courses. David Clinton shows how to build a highly available media wiki application and a wordpress site on above courses. He covers pretty much everything, right from designing your VPC with multiple subnets, configuring routing tables, creating multiple subnets etc  
+* I was lucky that I had access to an amazon account to launch services and play around with. Even if you don't want one, you can pretty much test everything thoroughly at around 8$ (well except redshift clusters etc). So get an account, create VPCs, subnets, play around with routing tables, Network ACLs, build a highly available app and auto scale it etc.   
+* Read [Amazon FAQs](http://aws.amazon.com/faqs/). They are very thorough and you might find answers to most of your future examination questions. Read EC2, VPC, S3/Glacier, IAM FAQs completely.  
+* During the exam, read the question carefully. When asking questions about less popular services like SQS, amazon is nice enough to add a couple of completely irrelevant options to make things easier for you. So read the questions and multiple choices carefully and when you don't know the answer for sure, use the process of elimination. :)  
 
 I am currently preparing for [Implementing Microsoft Azure Infrastructure Solutions](https://www.microsoft.com/learning/en-in/exam-70-533.aspx) and I hope to share my experiences once I a appear for the exam. Meanwhile, good luck and happy preparing! 
