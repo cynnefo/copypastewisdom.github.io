@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Azure Stencil in Cacoo store"
-excerpt: "Azure Stencil"
+excerpt: "Azure stencil for building arch diagrams"
 categories: articles
 tags: [Azure, Tools]
 comments: true
