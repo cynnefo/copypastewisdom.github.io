@@ -13,5 +13,7 @@ We often make cloud architecture diagrams and here at [Minjar](http://www.minjar
 Here is one of the architecture diagrams I built using that stencil:
 
 <figure>
-	<img src="/images/azurecacoo.png" alt="image">
+	<img src="/images/AzureCacoo.png" alt="image">
 </figure>  
+
+have fun!
