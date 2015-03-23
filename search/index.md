@@ -5,7 +5,7 @@ date:
 modified:
 excerpt:
 search_omit: true
-sitemap: false
+sitemap: true
 ---
   
 <!-- Search form -->
