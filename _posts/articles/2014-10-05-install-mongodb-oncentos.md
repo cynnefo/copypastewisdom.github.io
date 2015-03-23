@@ -4,7 +4,7 @@ title: "Installing MongoDB on CentOS"
 categories: articles
 excerpt: "Install MongoDB on CentOS"
 tags: [mongodb]
-date: 2014-10-05T13:56:53+05:30
+date: 2014-10-04T13:56:53+05:30
 comments: true
 share: true
 ---
