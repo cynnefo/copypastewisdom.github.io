@@ -5,7 +5,7 @@ locale: en_US
 description: We shall not cease from exploration...!
 #logo: site-logo.png
 search: true
-url: http://cynnefo.github.io
+url: http://www.cynnefo.com
 
 # Jekyll configuration
 
@@ -34,7 +34,7 @@ owner:
   name: RK Kuppala
   avatar: bio-photo.jpg
   email: yogirk1@gmail.com
-  disqus-shortname: yogirk
+  disqus-shortname: Cynnefo
   twitter: Ranjeeth
   facebook: #username
   github: #username
@@ -42,7 +42,7 @@ owner:
   linkedin: yogirk
   google:
     plus: RKKuppala
-    analytics: UA-51329728-1 
+    analytics: UA-61219276-1
     verify:
     ad-client:
     ad-slot: 
