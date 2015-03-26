@@ -59,7 +59,7 @@ And boom! it looks like it succeeded. Lets check inside the server and see if it
 
 It sure does!
 
-**Watch out!** I didn't find documentation on MSDN supporting usage of this cmdlet on OS Disk. While it worked perfectly, I am still not sure whether Microsoft officially supports this way. So Please don't blame if you servers get lost into a galaxy far far away! :) 
+**Watch out!** I didn't find documentation on MSDN supporting usage of this cmdlet on OS Disk. While it worked perfectly, I am still not sure whether Microsoft officially supports this way. So Please don't blame if you servers disappear into a galaxy far far away! :) 
 {: .notice} 
 
 
