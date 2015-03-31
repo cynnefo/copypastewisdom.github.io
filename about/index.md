@@ -11,6 +11,6 @@ modified: 2015-01-24T19:44:38.564948-04:00
 
 From **His Master's Voice**, Stanisław Lem
 
-So there! There is nothing worth knowing about me. But I can give you a few inconsequential details, see if you find them useful :-). I babysit Database servers of several kinds for a living. I am passionate about all things related to Technology. I have been a wannabe programmer for a long time and I have recently started doing some interesting stuff on Microsoft Azure and Amazon AWS. You may find stuff related to Databases, Azure/AWS, general DevOps, a bit of Python/Powershell and other random geek stuff on this blog.  
+So there! There is nothing worth knowing about me. But I can give you a few inconsequential details, see if you find them useful :-). I babysit Database servers of several kinds for a living. I am passionate about all things related to technology. I have been a wannabe programmer for a long time and I have recently started doing some interesting stuff on Microsoft Azure and Amazon AWS. You may find stuff related to Databases, Azure/AWS, general DevOps, a bit of Python/Powershell and other random geek stuff on this blog.  
 
 Thanks for visiting. Have fun!!
