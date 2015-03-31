@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-Analyze](http://www.postgresql.org/docs/9.1/static/sql-analyze.html) in PostgreSQL is like `sp_updatestats` of *SQL Server*. Analyze gathers statistics about number of rows in a table and stores them in pg_statistics system catalog, which are used by query planner to create optimal query plans. Below is a shell script that is useful to update statistics on a schema. If you are on a single database and multi-tenant model, this is pretty useful to update the target tenant schema, without updating the entire database. 
+[Analyze](http://www.postgresql.org/docs/9.1/static/sql-analyze.html) in PostgreSQL is like `sp_updatestats` of *SQL Server*. Analyze gathers statistics about number of rows in a table and stores them in pg_statistics system catalog, which are used by query planner to create optimal query plans. Below is a shell script that is useful to update statistics on a schema. If you are on a single database and multi-tenant model, this is pretty useful to update the target tenant schema, without updating the entire database. 
 
 Before executing this, you might want to add postgres user, password and host to your [pgpass](http://www.postgresql.org/docs/9.1/static/libpq-pgpass.html) file, so that you can execute this shell script without being prompted for password. 
 
