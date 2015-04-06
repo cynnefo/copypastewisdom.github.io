@@ -12,18 +12,18 @@ I recently wrote about [Understanding Riak Clusters](http://www.cynnefo.com/arti
 
 The script iterates through a list of nodes and does the following:
 	
-	1. Makes an SSH connection to the node using `fabric`
-	2. Stops Riak service by running `riak stop` command. Since our storage backend is `leveldb` and not `bitcask`, stopping services is necessary before initiating a snapshot.
-	3. Takes snapshots of all ebs volumes attached to the instance
-	4. Starts riak service post snapshot using `riak start` command
-	5. Checks if all the primary vnodes are up and running using `riak-admin transfers` command. If they aren't, you'll generally see a text like this - *does not have \d+ primary partitions running*
-	6. Checks if there are `handoffs` pending and waits till they are done before moving on to next node. When a node is down in a riak cluster, vnodes from the other live nodes temporarily takes responsibility for some data and once node is back online, returns the data to original owner. This is a called a [hinted handoff](http://docs.basho.com/riak/latest/ops/running/handoff/). We need to make sure that there are handoff transfers before moving on to the other nodes. Makes sure that riak kv service is up. 
-	7. Moves to other node and starts from step #1 and at the end, sends out an email with status. 
+1. Makes an SSH connection to the node using `fabric`
+2. Stops Riak service by running `riak stop` command. Since our storage backend is `leveldb` and not `bitcask`, stopping services is necessary before initiating a snapshot.
+3. Takes snapshots of all ebs volumes attached to the instance
+4. Starts riak service post snapshot using `riak start` command
+5. Checks if all the primary vnodes are up and running using `riak-admin transfers` command. If they aren't, you'll generally see a text like this - *does not have \d+ primary partitions running*
+6. Checks if there are `handoffs` pending and waits till they are done before moving on to next node. When a node is down in a riak cluster, vnodes from the other live nodes temporarily takes responsibility for some data and once node is back online, returns the data to original owner. This is a called a [hinted handoff](http://docs.basho.com/riak/latest/ops/running/handoff/). We need to make sure that there are handoff transfers before moving on to the other nodes. Makes sure that riak kv service is up. 
+7. Moves to other node and starts from step #1 and at the end, sends out an email with status. 
 	
 Considerations before running this script:
 	
-	1. You need fabric, boto python libraries
-	2. Fabric executes remote sudo commands for stopping and starting riak. You need to edit the sudoers file and change `requiretty` to `!requiretty`. [It apparently provides no additional security benefit](http://unix.stackexchange.com/a/122624) and can be removed
+1. You need fabric, boto python libraries
+2. Fabric executes remote sudo commands for stopping and starting riak. You need to edit the sudoers file and change `requiretty` to `!requiretty`. [It apparently provides no additional security benefit](http://unix.stackexchange.com/a/122624) and can be removed
 	
 
 Blow is the script. You may also download it from [here](https://www.dropbox.com/s/vecmh49hmy4dvqt/riakbackup.py?dl=0): 
