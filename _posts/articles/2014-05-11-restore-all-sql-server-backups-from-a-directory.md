@@ -1,12 +1,15 @@
 ---
 layout: post
-title: "Restore All SQL Server Backups From a Directory"
-excerpt: ""
-modified: 2014-05-11 20:16:05 +0530
+title: Restore All SQL Server Backups From a Directory
+excerpt: ''
+modified: '2014-05-11T14:46:05.000+00:00'
 categories: articles
-tags: [AWS, SQLServer]
+tags:
+- AWS
+- SQLServer
 comments: true
 share: true
+date: '2014-05-11T00:00:00.000+00:00'
 ---
 
 I had to setup database mirroring for 50 databases on amazon EC2 servers which are in different availability zones. Mirroring needs to be initiated with a full and at least one transaction log restores. Restoring 50 databases manually is a cumbersome task. Some of these databases have multiple data files and the logical names are different. I initially tried to generate restore scripts using `TSQL WHILE or CURSOR` but I quickly lost the plot with multiple temp tables and variables. You need to first run a `RESTORE HEADERONLY` for each database file, get the database name, run `RESTORE VERIFYONLY` for Logical/physical file names, build restore scripts. 

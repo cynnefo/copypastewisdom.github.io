@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Microsoft Azure
-excerpt: "An archive of articles related to Azure"
+excerpt: An archive of articles related to Azure
 search_omit: true
 ---
 

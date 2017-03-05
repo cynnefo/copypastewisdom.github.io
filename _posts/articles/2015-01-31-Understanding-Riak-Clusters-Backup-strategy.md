@@ -1,11 +1,15 @@
 ---
 layout: post
-title: "Understanding Riak Clusters - Designing a Backup strategy"
-excerpt: "How Riak Works, how do you back it up?"
+title: Understanding Riak Clusters - Designing a Backup strategy
+excerpt: How Riak Works, how do you back it up?
 categories: articles
-tags: [Databases, AWS, NoSQL]
+tags:
+- Databases
+- AWS
+- NoSQL
 comments: true
 share: true
+date: '2015-01-31T00:00:00.000+00:00'
 ---
 This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/post/109769009085/understanding-riak-clusters-designing-a-backup). 
 {: .notice}

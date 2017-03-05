@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Azure Linux VM - Resize root volume"
-excerpt: "How do you resize an Azure root volume?"
+title: Azure Linux VM - Resize root volume
+excerpt: How do you resize an Azure root volume?
 categories: articles
-tags: [Azure]
+tags:
+- Azure
 comments: true
 share: true
+date: '2015-03-26T00:00:00.000+00:00'
 ---
 
 So you are stuck. You provisioned an Azure linux VM back when the maximum size of OS drive was 127 GB and for whatever reason, your root volume is filling up and you would like to extend it. Microsoft has [recently removed this restriction](http://azure.microsoft.com/blog/2015/03/25/azure-vm-os-drive-limit-octupled/) and it can now be 1023 GB. I have been there too and naturally, I took to Google and find a way around. All these proposed solutions were rather elaborate and required deletion of the VM without deleting attached disks, extending the disk using a tool like cloud explorer etc. I was almost tempted to try these steps on [LessThanDot Blog](http://blogs.lessthandot.com/index.php/enterprisedev/cloud/azure/expanding-an-existing-azure-vm-system-drive/) but the prospect of deleting the VM frightened me. 

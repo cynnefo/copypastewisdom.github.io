@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About 
-excerpt: "Let there be light!"
-modified: 2015-01-24T19:44:38.564948-04:00
+title: About
+excerpt: Let there be light!
+modified: '2015-01-24T23:44:38.564+00:00'
 ---
 
 >With sufficient imagination a man could write a whole series of versions of his life; it would form a union of sets in which the facts would be the only elements in common. People, even intelligent people, who are young, and therefore inexperienced and naïve, see only cynicism in such a possibility. They are mistaken, because the problem is not moral but cognitive. The number of metaphysical beliefs is no greater or less than the number of different beliefs a man may entertain on the subject of himself – sequentially, at various periods of his life, and occasionally even at the same time.

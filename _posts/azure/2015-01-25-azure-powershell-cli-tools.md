@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Azure Command Line Tools: Cross Platform CLI aka xplat-cli"
-excerpt: "Azure management and automation"
+title: 'Azure Command Line Tools: Cross Platform CLI aka xplat-cli'
+excerpt: Azure management and automation
 categories: articles
-tags: [Azure, Tools]
+tags:
+- Azure
+- Tools
 comments: true
 share: true
+date: '2015-01-25T00:00:00.000+00:00'
 ---
 
 If you are launching an occasional VM, administering a small environment on Azure, the management console does the job but if you need to deal with multiple subscriptions and get things done pretty quick, cli tools are must. Fortunately, you have multiple choices with Azure here - 

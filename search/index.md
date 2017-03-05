@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Search"
+title: Search
 date: 
-modified:
-excerpt:
+modified: 
+excerpt: 
 search_omit: true
 sitemap: true
 ---

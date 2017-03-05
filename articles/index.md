@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Articles
-excerpt: "An archive of articles sorted by date."
+excerpt: An archive of articles sorted by date.
 search_omit: true
 ---
 

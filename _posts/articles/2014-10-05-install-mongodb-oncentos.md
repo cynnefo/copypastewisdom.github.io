@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Installing MongoDB on CentOS"
+title: Installing MongoDB on CentOS
 categories: articles
-excerpt: "Install MongoDB on CentOS"
-tags: [mongodb]
-date: 2014-10-04T13:56:53+05:30
+excerpt: Install MongoDB on CentOS
+tags:
+- mongodb
+date: '2014-10-04T08:26:53.000+00:00'
 comments: true
 share: true
 ---

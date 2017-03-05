@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Amazon RDS Encryption and Benchmarking PostgreSQL"
-excerpt: "Benchmarking Amazon encrypted RDS with PGBench"
+title: Amazon RDS Encryption and Benchmarking PostgreSQL
+excerpt: Benchmarking Amazon encrypted RDS with PGBench
 categories: articles
-tags: [AWS, PostgreSQL]
+tags:
+- AWS
+- PostgreSQL
 comments: true
 share: true
+date: '2015-01-24T00:00:00.000+00:00'
 ---
 
 This post was originally written for [Minjar](http://minjar.com/) Blog and it was first published [here](http://blog.minjar.com/post/108724853340/rds-encryption-and-benchmarking-postgresql). Go check out that blog, lots of interesting stuff in there :)

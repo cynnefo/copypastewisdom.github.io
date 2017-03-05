@@ -1,15 +1,11 @@
-# Site navigation links
+---
 - title: Home
   url: 
-  
 - title: About
-  url: /about/
-
+  url: "/about/"
 - title: Articles
-  url: /articles/
-
+  url: "/articles/"
 - title: Tags
-  url: /tags/
-
+  url: "/tags/"
 - title: Search
-  url: /search/
+  url: "/search/"

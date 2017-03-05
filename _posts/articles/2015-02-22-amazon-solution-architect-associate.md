@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Passed Amazon Solution Architect - Associate Level Exam"
-excerpt: "My experiences preparing for the exam, tips etc"
+title: Passed Amazon Solution Architect - Associate Level Exam
+excerpt: My experiences preparing for the exam, tips etc
 categories: articles
-tags: [AWS, Exams]
+tags:
+- AWS
+- Exams
 comments: true
 share: true
+date: '2015-02-22T00:00:00.000+00:00'
 ---
 
 

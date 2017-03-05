@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Remove Specific Email Address From Multiple Rows"
-excerpt: "TSQL fun with REPLACE"
+title: Remove Specific Email Address From Multiple Rows
+excerpt: TSQL fun with REPLACE
 categories: articles
-tags: [Databases, TSQL]
-date: 2014-09-28T17:19:17+05:30
+tags:
+- Databases
+- TSQL
+date: '2014-09-28T11:49:17.000+00:00'
 comments: true
 share: true
 ---

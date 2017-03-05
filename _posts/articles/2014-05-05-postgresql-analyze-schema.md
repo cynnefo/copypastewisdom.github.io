@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "PostgreSQL - Analyze specific schema - Shell script"
+title: PostgreSQL - Analyze specific schema - Shell script
 categories: articles
-excerpt: "updating statistics of a schema in multi tenant database"
-tags: [PostgreSQL, Databases]
+excerpt: updating statistics of a schema in multi tenant database
+tags:
+- PostgreSQL
+- Databases
 comments: true
 share: true
+date: '2014-05-05T00:00:00.000+00:00'
 ---
 
 [Analyze](http://www.postgresql.org/docs/9.1/static/sql-analyze.html) in PostgreSQL is like `sp_updatestats` of *SQL Server*. Analyze gathers statistics about number of rows in a table and stores them in pg_statistics system catalog, which are used by query planner to create optimal query plans. Below is a shell script that is useful to update statistics on a schema. If you are on a single database and multi-tenant model, this is pretty useful to update the target tenant schema, without updating the entire database. 

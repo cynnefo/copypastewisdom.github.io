@@ -1,11 +1,15 @@
 ---
 layout: post
-title: "Riak Cluster Backup Script on Amazon EC2"
-excerpt: "Python script to backup riak cluster on EC2"
-category: [databases]
-tags: [riak,nosql]
+title: Riak Cluster Backup Script on Amazon EC2
+excerpt: Python script to backup riak cluster on EC2
+tags:
+- riak
+- nosql
 comments: true
 share: true
+categories:
+- databases
+date: '2015-04-06T00:00:00.000+00:00'
 ---
 
 I recently wrote about [Understanding Riak Clusters](http://www.cynnefo.com/articles/Understanding-Riak-Clusters-Backup-strategy/) and designing a backup strategy. One of our customer has a 5 node Riak cluster running on AWS EC2 and we had to create a backup job for it. If you are running riak `enterprise` edition, the best way to do a backup is to do a [full sync replication](http://docs.basho.com/riakee/latest/cookbooks/Multi-Data-Center-Replication-Architecture/#Fullsync-Replication) every day to a node in a different datacenter. Since we are not running enterprise edition, we decided to go with file system level backups of each node. Since we were running on Amazon EC2, the ebs snapshots feature comes in handy and it is faster compared to `rsync` or archiving etc. 

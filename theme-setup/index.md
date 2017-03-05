@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Theme Setup
-excerpt: "Instructions on how to install and customize the Jekyll theme So Simple."
-modified: 2014-08-08T20:04:41.231140-04:00
+excerpt: Instructions on how to install and customize the Jekyll theme So Simple.
+modified: '2014-08-09T00:04:41.231+00:00'
 image:
   feature: so-simple-sample-image-6.jpg
   credit: WeGraphics

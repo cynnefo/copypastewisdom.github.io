@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "MongoDB Notes: Memory Model"
-excerpt: "Understanding MongoDB memory"
-modified: 2014-05-11 20:16:05 +0530
+title: 'MongoDB Notes: Memory Model'
+excerpt: Understanding MongoDB memory
+modified: '2014-05-11T14:46:05.000+00:00'
 categories: articles
-tags: [MongoDB]
+tags:
+- MongoDB
 comments: true
 share: true
+date: '2014-10-05T00:00:00.000+00:00'
 ---
 
 These are notes I took from M202 class and from reading [docs](http://docs.mongodb.org/manual/faq/storage/). I intend to keep publishing notes here throughout the course, because you know writing is a process of thinking with clarity. 

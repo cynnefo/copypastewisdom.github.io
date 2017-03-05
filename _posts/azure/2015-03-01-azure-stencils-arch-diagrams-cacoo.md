@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Azure Stencil in Cacoo store"
-excerpt: "Azure stencil for building arch diagrams"
+title: Azure Stencil in Cacoo store
+excerpt: Azure stencil for building arch diagrams
 categories: articles
-tags: [Azure, Tools]
+tags:
+- Azure
+- Tools
 comments: true
 share: true
+date: '2015-03-01T00:00:00.000+00:00'
 ---
 
 tl;dr version. We have published an azure stencil on cacoo. Start using it here: [https://cacoo.com/store/items/10512](https://cacoo.com/store/items/10512)
